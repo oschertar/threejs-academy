@@ -45,17 +45,6 @@ function light_update() {
   light.position.copy(camera.position);
 }
 
-//renderer.render(scene, camera);
-
-//camera.position.z = 5;
-
-// const geometry = new THREE.BoxGeometry(1, 1, 1);
-// const material = new THREE.MeshBasicMaterial({
-//   color: "blue",
-// });
-// const cube = new THREE.Mesh(geometry, material);
-// scene.add(cube);
-
 camera.position.z = 5;
 
 function animate() {
@@ -63,10 +52,8 @@ function animate() {
 
   if (model) {
     //model.rotation.x += 0.01;
-    //model.rotation.y += 0.005;
+    model.rotation.y += 0.005;
   }
-  // cube.rotation.x += 0.01;
-  // cube.rotation.y += 0.01;
 
   renderer.render(scene, camera);
 }
